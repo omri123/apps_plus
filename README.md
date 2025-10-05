@@ -1,3 +1,12 @@
+## APPS+ Dataset
+This is my copy of the APPS+ dataset.
+I am adding some code to load, process and evaluate the data.
+
+To test:
+```bash
+PYTHONPATH=src pytest
+```
+
 # APPS_Plus
 This is the repository for [StepCoder: Improving Code Generation with Reinforcement Learning from Compiler Feedback](https://arxiv.org/pdf/2402.01391.pdf).
 ## Summary
@@ -7,7 +16,7 @@ This is the repository for [StepCoder: Improving Code Generation with Reinforcem
 👉 The new version of our APPS+ dataset is available at here: https://drive.google.com/file/d/1wfrDRcvAn38qj5dDmQZwaoLIAmT4q7KQ/view?usp=sharing
 
 
-Based on APPS, we released the first version of the apps+ data, and we will further manually refine it, which is expected to increase the average number of unit tests to 15! 
+Based on APPS, we released the first version of the apps+ data, and we will further manually refine it, which is expected to increase the average number of unit tests to 15!
 
 
 👉**APPS+ is refined from [APPS](https://github.com/hendrycks/apps) and contains programming problems from open-access sites, including Codewars, AtCoder, Kattis, and Codeforces.**
@@ -15,7 +24,7 @@ Based on APPS, we released the first version of the apps+ data, and we will furt
 ## Refinement
 To refine the APPS dataset, we excluded instances lacking input, output, or canonical solutions. Then, we standardized the formats of input and output to facilitate the execution and comparison of unit tests. We conducted unit tests and manual analysis for each instance, eliminating those with incomplete or irrelevant code, syntax errors, API misuse, or missing library dependencies. For discrepancies in output, we manually reviewed the problem description, correcting the expected output or eliminating the instance.
 
-Finally, we construct the APPS+ dataset, containing 7,413 instances (introductory: 2889, interview: 3592, competition: 572). Each instance includes a programming problem description, a canonical solution, a function name, unit tests (i.e., inputs and outputs), and starter code (i.e., the beginning part of the canonical solution). 
+Finally, we construct the APPS+ dataset, containing 7,413 instances (introductory: 2889, interview: 3592, competition: 572). Each instance includes a programming problem description, a canonical solution, a function name, unit tests (i.e., inputs and outputs), and starter code (i.e., the beginning part of the canonical solution).
 
 ## Acknowledgement
 ```
