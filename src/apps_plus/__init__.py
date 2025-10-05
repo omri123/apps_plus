@@ -55,12 +55,12 @@ def get_function_name(s: str) -> str | None:
     return match.group(1) if match else None
 
 
-def evaluate_void_function(fname, inputs, outputs, solution):
+def evaluate_void_function(function_name, inputs, outputs, solution):
     import tempfile
 
     with tempfile.NamedTemporaryFile("w") as file:
         file.write(solution)
-        file.write(f"\n\n{fname}()\n")
+        file.write(f"\n\n{function_name}()\n")
         file.flush()
 
         results = []
@@ -81,7 +81,7 @@ def evaluate_void_function(fname, inputs, outputs, solution):
         return "failed"
 
 
-def evaluate_apps_solution(starter: str, inputs, outputs, solution: str):
+def evaluate_apps_solution(starter, inputs, outputs, solution):
     if is_void_function_signature(starter):
         function_name = get_function_name(starter)
         return evaluate_void_function(function_name, inputs, outputs, solution)

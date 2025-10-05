@@ -2,6 +2,11 @@
 This is my copy of the APPS+ dataset.
 I am adding some code to load, process and evaluate the data.
 
+Interesting functions:
+- `get_apps_data()`: load the APPS+ dataset from the local file.
+- `evaluate_apps_solution(starter, inputs, outputs, solution)`: evaluate a solution against
+  the inputs and outputs, given the starter code.
+
 To test:
 ```bash
 PYTHONPATH=src pytest
